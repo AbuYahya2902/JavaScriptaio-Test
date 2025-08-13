@@ -13,11 +13,14 @@
   <div id="message"></div>
   <script>
     const dt = new Date();
-    const month = dt.getMonth() - 4;
-    let msg;
+    const month = dt.getMonth() - 7; // Get the current month as a number (0-11)
+    let msg1 = `The month number is ${month}`;
+    let msg = msg1 + ` and the month name is ${dt.toLocaleString('default', { month: 'long' })}.`;
+    ;
     switch (month) {
       case 0:
-        msg = 'January 4 is National Spaghetti Day!';
+
+        msg = msg + 'January 4 is National Spaghetti Day!'
         break;
       case 1:
         msg = 'February 9 is National Pizza Day!';
