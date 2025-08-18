@@ -11,12 +11,14 @@
   <!-- Display a message based on the current month/JavaScripting-->
   <p>Check the console for the month number.</p>
   <div id="message"></div>
+  <div id="message2"></div>
   <script>
     const dt = new Date();
     const month = dt.getMonth() - 7; // Get the current month as a number (0-11)
-    let msg1 = `The month number is ${month}`;
-    let msg = msg1 + ` and the month name is ${dt.toLocaleString('default', { month: 'long' })}.`;
-    ;
+    let msg = `The month number is ${month}`;
+    let msg2 = ` and the month name is ${dt.toLocaleString('default', { month: 'long' })}.`;
+    console.log(`The month number is ${month}`);
+    console.log(`The month name is ${dt.toLocaleString('default', { month: 'long' })}`);
     switch (month) {
       case 0:
 
